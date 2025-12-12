@@ -1,0 +1,85 @@
+/* styles.css - simple responsive layout */
+:root {
+  --bg: #0f1724;
+  --card: #0b1220;
+  --accent: #2dd4bf;
+  --muted: #94a3b8;
+  --text: #e6eef6;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: linear-gradient(180deg, #071023 0%, #07182a 100%);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+.header {
+  text-align: center;
+  padding: 24px 12px;
+}
+.header h1 { margin: 0 0 4px; font-size: 1.6rem; }
+.header p { margin: 0; color: var(--muted); }
+
+.container {
+  max-width: 1100px;
+  margin: 18px auto;
+  padding: 0 12px 48px;
+}
+
+/* Search area */
+.search-area {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+  align-items: center;
+  justify-content: center;
+}
+.search-area input {
+  width: 60%;
+  min-width: 220px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+}
+.search-area button {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: none;
+  background: var(--accent);
+  color: #042028;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.status { color: var(--muted); text-align: center; padding-top: 8px; }
+
+/* cards */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+.card {
+  background: rgba(255,255,255,0.03);
+  padding: 14px;
+  border-radius: 10px;
+  min-height: 140px;
+}
+.card h2 { margin-top: 0; font-size: 1.05rem; color: var(--accent); }
+.card pre { white-space: pre-wrap; font-family: monospace; font-size: 0.9rem; color: var(--muted); }
+
+/* small screens */
+@media (max-width: 780px) {
+  .cards { grid-template-columns: 1fr; }
+  .search-area input { width: 100%; }
+}
+.footer {
+  text-align:center;
+  padding: 16px 0;
+  color: var(--muted);
+}

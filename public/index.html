@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Global Country Insights Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <h1>Global Country Insights Dashboard</h1>
+    <p>Search any country to view weather, demographics, currency and air quality.</p>
+  </header>
+
+  <main class="container">
+    <section class="search-area">
+      <input id="countryInput" type="text" placeholder="Enter country name (e.g., Sri Lanka)" />
+      <button id="searchBtn">Search</button>
+      <div id="status" class="status"></div>
+    </section>
+
+    <section class="cards">
+      <div class="card" id="countryCard">
+        <h2>Country Info</h2>
+        <div id="countryContent">No data yet.</div>
+      </div>
+
+      <div class="card" id="weatherCard">
+        <h2>Weather</h2>
+        <div id="weatherContent">No data yet.</div>
+      </div>
+
+      <div class="card" id="exchangeCard">
+        <h2>Currency & Exchange</h2>
+        <div id="exchangeContent">No data yet.</div>
+      </div>
+
+      <div class="card" id="aqCard">
+        <h2>Air Quality</h2>
+        <div id="aqContent">No data yet.</div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <small>Group 46 • Project: Global Country Insights Dashboard</small>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
